@@ -13,12 +13,6 @@ try:
 except Exception as e:
     print(str(e))
 
-indianist = timezone('Asia/Kolkata')
-global oldata
-oldata = None
-print("Welcome here! This is an alternative socket of Loco Trivia made by Rounak in Python!")
-    
-
 # input all datas
 
 self_token = "self token"
@@ -34,8 +28,11 @@ Crowd_channels = ["xxxxxxxxxx","xxxxxxxxxxxxx"]
 
 global counter1,counter2,counter3
 counter1,counter2,counter3 = 0,0,0
+global oldata
+oldata = None
+indianist = timezone('Asia/Kolkata')
 client = discord.Client()
-hook = Webhook(webhook_url)
+
 def getuser():
     req = requests.get("https://jsonblob.com/api/jsonBlob/5a7661d6-7fd5-11e9-8d0e-6fe578ed4135")
     try:
