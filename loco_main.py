@@ -93,7 +93,7 @@ async def fetch_data(oldata):
                         embed2.add_field(name=f":two: ", value=f"`{counter2}`")
                         embed2.add_field(name=f":three: ", value=f"`{counter3}` ✅")
                     await bot.edit_message(emd_msg, embed=embed2)
-                    time.sleep(1)
+                    await asyncio.sleep(1)
                 counter1,counter2,counter3 = 0,0,0
             elif data["type"] == "QuestionSummary":
                 correct = data["correct"]
