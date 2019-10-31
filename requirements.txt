@@ -1,0 +1,6 @@
+discord.py==0.16.12
+requests
+asyncio
+pytz
+dhooks
+datetime
