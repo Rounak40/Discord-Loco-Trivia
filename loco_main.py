@@ -1,17 +1,11 @@
 try:
-    import requests
-    import json
-    import asyncio
+    import requests,json,asyncio,pytz,time,discord
     from dhooks import Webhook, Embed
     from datetime import datetime
     from pytz import timezone
-    import pytz
-    import time
-    import discord
     from discord.ext.commands import Bot
-    from discord.ext import commands
 except Exception as e:
-    print(str(e))
+    print("Import Error:",str(e))
 
 # input all datas
 
@@ -38,7 +32,7 @@ indianist = timezone('Asia/Kolkata')
 client = discord.Client()
 
 
-bot = commands.Bot(command_prefix=bot_prefix)
+bot = Bot(command_prefix=bot_prefix)
 bot.remove_command('help')
 
 def getuser():
