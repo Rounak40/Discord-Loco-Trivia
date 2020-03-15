@@ -53,7 +53,10 @@ async def fetch_data(oldata):
     while True:
         data = getuser()
         if data != oldata:
-            if data["type"] == "starting":
+            if data["type"] == "message":
+                print("Message:",data["message"])
+                await bot.send_message(channel,"Message: "+str(data["message"]))
+            elif data["type"] == "starting":
                 print('Game is Starting within 5m!')
                 await bot.send_message(channel,'Game is Starting within 5m!')
             elif data["type"] == "Question":
